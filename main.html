@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<title>Notes Reminder</title>
+</head>
+<body onload="fromLocalStorage()">
+    <nav class="navbar navbar-light bg-primary">
+        <a class="navbar-brand mb-0 h1">Notes Reminder</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Serach" id="search">
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+    <br />
+    <div class="jumbatron">
+        <div class="container">
+            <h1 class="display-4">Welcome To Notes Reminder</h1>
+            <p class="lead">Memorizes the Notes while pasted on your favourite app!</p>
+        </div>
+    </div>
+
+    <form>
+        <div class="container">
+            <div class="form-group">
+                <label for="textarea">Write Notes :-</label>
+                <textarea class="form-control" id="textarea" rows="3"></textarea><br>
+                <button class="btn btn-primary" onclick="createCard()" id="Add Note">Add Note</button>
+            </div>
+        </div>
+    </form>
+
+    <br>
+    <div class="container">
+        <h3>Your Notes :-</h3>
+        <div id="note"></div>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
